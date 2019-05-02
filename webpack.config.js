@@ -2,13 +2,13 @@ const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
-    entry: {
-        app: __dirname + '/src/index.js',//唯一入口文件,__dirname是nodejs里的一个全局变量，它指向的是我们项目的根目录
-    },
-    output: {
-        path: path.join(__dirname, './dist'),//打包后的文件存放的地方
-        filename: 'main.js'
-    },
+    // entry: {
+    //     app: __dirname + '/src/index.js',//唯一入口文件,__dirname是nodejs里的一个全局变量，它指向的是我们项目的根目录
+    // },
+    // output: {
+    //     path: path.join(__dirname, './dist'),//打包后的文件存放的地方
+    //     filename: 'main.js'
+    // },
     mode: 'development',
     module: {
         rules: [
