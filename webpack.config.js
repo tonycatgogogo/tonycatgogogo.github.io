@@ -2,6 +2,13 @@ const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  entry: {
+    app: __dirname + '/src/index.js',//唯一入口文件,__dirname是nodejs里的一个全局变量，它指向的是我们项目的根目录
+  },
+  output: {
+    path: path.resolve(__dirname, './dist'),//打包后的文件存放的地方
+    filename: 'js/main.js'
+  },
   mode: 'development',
   module: {
     rules: [
@@ -19,8 +26,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: path.join(__dirname, './src/index.html'),
-      filename: "./index.html"
+      template: path.join(__dirname, './index.html'),
+      filename: "./index.html",
+      favicon: './favicon.ico'
     })
   ]
 };

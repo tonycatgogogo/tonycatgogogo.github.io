@@ -4,7 +4,9 @@
   "description": "personal website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --open --port 3000 --contentBase src --hot",
+    "build": "webpack --progress --hide-modules"
   },
   "repository": {
     "type": "git",
